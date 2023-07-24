@@ -1,0 +1,312 @@
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  --sider-width: 300px;
+  --header-height: 50px;
+}
+
+
+
+.loading-animation
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.not-found-header
+{
+  font-size: 100px;
+  margin: 0px;
+  margin-top: 100px;
+}
+
+
+
+.home
+{
+  height: 100vh;
+}
+
+.home-background
+{
+  background: linear-gradient(45deg,#367fed,#fa9e0a);
+  width: 100%;
+  height: 40% !important;
+  position: absolute;
+  z-index: -1;
+  border-radius: 30px;
+  opacity: 0.2;
+  filter: blur(50px);
+}
+
+
+.header
+{
+  height: var(--header-height);
+  background-color: rgba(255, 255, 255, 0.363); 
+  border-bottom: 1px solid #b1b6bd;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sider-and-tasks
+{
+  height: calc(100vh - var(--header-height) - 1px) !important;
+  display: flex;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.sider
+{
+  width: 300px;
+  background-color: #bebebe15;
+  text-align: left;
+  border-right: 1px solid #f1f1f1;
+  padding: 5px;
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media(max-width: 650px)
+{
+  .sider
+  {
+    z-index: 10;
+    width: 100%;
+    border-right: none;
+    position: absolute;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+}
+
+.add-porject-button
+{
+  padding: 5px;
+  width: 100%;
+  text-align: left;
+}
+
+.list
+{
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none !important;
+  color: black !important;
+  border-radius: 7px;
+  z-index: 20;
+}
+
+.list-chosen, .list:hover
+{
+  background-color: #e5eaee;
+}
+
+.list-dragging
+{
+  background-color: #e5eaee;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+
+.list-draggingOver
+{
+  background-color: #c6cdd3;
+}
+
+.list-name
+{
+  width: calc(100% - 13px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.list-droppable
+{
+  width: 100%;
+}
+
+.list-draggable
+{
+  margin-bottom: 5px;
+}
+
+
+
+.home-inner
+{
+  flex: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.task-list
+{
+  max-width: 1000px; 
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.no-tasks
+{
+  transform: scale(1.5);
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
+.task-list-header
+{
+  text-align: left;
+  margin: 0;
+}
+
+.task
+{
+  width: 100%;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  z-index: 20;
+}
+
+.task-dragging, .task:hover
+{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #eff1f3;
+}
+
+.task-details
+{
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+
+.task-note
+{
+  color: rgb(56, 71, 83);
+}
+
+.task-outer
+{
+  padding: 3px;
+}
+
+.task-draggable
+{
+  margin-bottom: 10px;
+}
+
+.task-date-list
+{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.task-list-info
+{
+  display: flex;
+  gap: 5px;
+}
+
+.task-list-info
+{
+  margin-left: auto;
+}
+
+
+
+.project-form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-form > div
+{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.color-choice
+{
+  display: flex;
+  gap: 5px;
+}
+
+.project-form-buttons
+{
+  gap: 10px;
+  justify-content: flex-end !important;
+}
