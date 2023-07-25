@@ -68,7 +68,6 @@ const ProjectForm = () => {
                 options={colorList()} 
                 defaultValue={form.color}
                 onChange={hanldeUpdateColor}
-                name="color"
                 value={form.color}
             />
 

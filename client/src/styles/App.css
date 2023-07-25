@@ -276,37 +276,5 @@
 {
   display: flex;
   gap: 5px;
-}
-
-.task-list-info
-{
   margin-left: auto;
-}
-
-
-
-.project-form
-{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.project-form > div
-{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.color-choice
-{
-  display: flex;
-  gap: 5px;
-}
-
-.project-form-buttons
-{
-  gap: 10px;
-  justify-content: flex-end !important;
 }
