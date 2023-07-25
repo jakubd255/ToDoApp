@@ -64,7 +64,8 @@ const TaskForm = () => {
             setForm({
                 text: editMode ? taskForm.showForm.text : "",
                 note: editMode ? taskForm.showForm.note : "",
-                date: taskForm.showForm.date
+                date: taskForm.showForm.date,
+                projectId: taskForm.showForm.projectId
             });
         }
     }
@@ -117,12 +118,14 @@ const TaskForm = () => {
                 reference={dateRef}
             />
 
+            <Divider/>
+
             <Select
                 options={projectsList()}
                 defaultValue={form.projectId}
                 value={form.projectId}
                 onChange={hanldeUpdateProjectId}
-                style={{minWidth: 145}}
+                style={{width: "100%"}}
             />
 
             <Divider/>
