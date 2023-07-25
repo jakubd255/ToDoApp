@@ -271,10 +271,3 @@
   justify-content: space-between;
   width: 100%;
 }
-
-.task-list-info
-{
-  display: flex;
-  gap: 5px;
-  margin-left: auto;
-}

@@ -118,13 +118,13 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                         }
 
                         {list &&
-                            <span className="task-list-info">
+                            <Space size={5} style={{marginLeft: "auto"}}>
                                 <span>{list.name}</span>
                                 <i
                                     className={list.icon || "bi bi-record-fill"}
                                     style={{color: list.color, fontSize: list.icon && "12px"}}
                                 />
-                            </span>
+                            </Space>
                         }
                     </div>
                 </div>
