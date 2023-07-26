@@ -94,32 +94,16 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                 </div>
                 
                 <div className="task-details">
-                    <span>
-                        {task.text}
-                    </span>
-                    
-                    <span className="task-note">
-                        {task.note}
-                    </span>
-
-                    {task.link && 
-                        <Space>
-                            <a href={task.link} target="_blank">
-                                {task.link}
-                            </a>
-                        </Space>
-                    }
-
-                    <div className="task-date-list">
-                        {(task.date && !today) && 
-                            <span style={{color: task.date < date() ? "red" : "black"}}>
-                                {formatDate()}
-                            </span>
-                        }
+                    <div className="task-text-list">
+                        <span>
+                            {task.text}
+                        </span>
 
                         {list &&
-                            <Space size={5} style={{marginLeft: "auto"}}>
-                                <span>{list.name}</span>
+                            <Space size={5}>
+                                <span>
+                                    {list.name}
+                                </span>
                                 <i
                                     className={list.icon || "bi bi-record-fill"}
                                     style={{color: list.color, fontSize: list.icon && "12px"}}
@@ -127,6 +111,26 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                             </Space>
                         }
                     </div>
+                    
+                    {task.note && 
+                        <span className="task-note">
+                            {task.note}
+                        </span>
+                    }
+
+                    {task.link &&
+                        <div>
+                            <a href={task.link} target="_blank">
+                                {task.link}
+                            </a>
+                        </div>
+                    }
+
+                    {(task.date && !today) && 
+                        <span style={{color: task.date < date() ? "red" : "black"}}>
+                            {formatDate()}
+                        </span>
+                    }
                 </div>
             </div>
         </Dropdown>
