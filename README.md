@@ -15,13 +15,6 @@ Task organizer written using MERN Stack.
 * Adding and editing tasks
 * Drag&Drop
 
-## Planned
-* Searchbar
-* Subtasks
-* Project sections
-* Changing the list from task form
-* Attachments in tasks
-
 ## Tech Stack
 * React.js
 * react-beautiful-dnd
