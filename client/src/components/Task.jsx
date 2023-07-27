@@ -1,5 +1,5 @@
 import React from "react";
-import { Checkbox, ConfigProvider, Dropdown, Space} from "antd";
+import { Checkbox, ConfigProvider, Dropdown, Space } from "antd";
 import Icon from "@ant-design/icons";
 import { date } from "../constants/date";
 import { useHomeContext } from "../context/HomeContext";
@@ -119,11 +119,11 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                     }
 
                     {task.link &&
-                        <div>
+                        <Space>
                             <a href={task.link} target="_blank">
                                 {task.link}
                             </a>
-                        </div>
+                        </Space>
                     }
 
                     {(task.date && !today) && 
