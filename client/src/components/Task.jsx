@@ -127,7 +127,7 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                     }
 
                     {(task.date && !today) && 
-                        <span style={{color: task.date < date() ? "red" : "black"}}>
+                        <span style={{color: (task.date < date() && !task.done) ? "red" : "black"}}>
                             {formatDate()}
                         </span>
                     }

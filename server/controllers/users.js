@@ -43,7 +43,7 @@ const register = async (req, res) => {
 
 
 
-//Logi to your account
+//Log in to your account
 const login = async (req, res) => {
     try
     {
