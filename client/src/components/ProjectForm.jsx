@@ -19,10 +19,10 @@ const ProjectForm = () => {
         return {
             value: color.value,
             label: (
-                <div className="color-choice">
+                <Space size={5}>
                     <i className="bi bi-record-fill" style={{color: color.value}}/>
                     <span>{color.name}</span>
-                </div>
+                </Space>
             )
         }
     });
@@ -68,7 +68,6 @@ const ProjectForm = () => {
                 options={colorList()} 
                 defaultValue={form.color}
                 onChange={hanldeUpdateColor}
-                name="color"
                 value={form.color}
             />
 

@@ -57,12 +57,12 @@ const Header = ({showDone, setShowDone, handleToggleSider}) => {
                 <Button
                     type="text"
                     onClick={handleToggleSider}
-                    icon={<i className="bi bi-list"/>}
+                    icon={<Icon component={() => <i className="bi bi-list"/>}/>}
                 />
                 <Button
                     type="text"
                     onClick={handleNavigateToday}
-                    icon={<i className="bi bi-house-door"/>}
+                    icon={<Icon component={() => <i className="bi bi-house-door"/>}/>}
                 />
             </Space>
 

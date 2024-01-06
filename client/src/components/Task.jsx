@@ -1,5 +1,5 @@
 import React from "react";
-import { Checkbox, ConfigProvider, Dropdown, Space} from "antd";
+import { Checkbox, ConfigProvider, Dropdown, Space } from "antd";
 import Icon from "@ant-design/icons";
 import { date } from "../constants/date";
 import { useHomeContext } from "../context/HomeContext";
@@ -94,15 +94,31 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                 </div>
                 
                 <div className="task-details">
-                    <span>
-                        {task.text}
-                    </span>
-                    
-                    <span className="task-note">
-                        {task.note}
-                    </span>
+                    <div className="task-text-list">
+                        <span>
+                            {task.text}
+                        </span>
 
-                    {task.link && 
+                        {list &&
+                            <Space size={5}>
+                                <span>
+                                    {list.name}
+                                </span>
+                                <i
+                                    className={list.icon || "bi bi-record-fill"}
+                                    style={{color: list.color, fontSize: list.icon && "12px"}}
+                                />
+                            </Space>
+                        }
+                    </div>
+                    
+                    {task.note && 
+                        <span className="task-note">
+                            {task.note}
+                        </span>
+                    }
+
+                    {task.link &&
                         <Space>
                             <a href={task.link} target="_blank">
                                 {task.link}
@@ -110,23 +126,11 @@ const Task = ({task, color, isDragging, today = false, list}) => {
                         </Space>
                     }
 
-                    <div className="task-date-list">
-                        {(task.date && !today) && 
-                            <span style={{color: task.date < date() ? "red" : "black"}}>
-                                {formatDate()}
-                            </span>
-                        }
-
-                        {list &&
-                            <span className="task-list-info">
-                                <span>{list.name}</span>
-                                <i
-                                    className={list.icon || "bi bi-record-fill"}
-                                    style={{color: list.color, fontSize: list.icon && "12px"}}
-                                />
-                            </span>
-                        }
-                    </div>
+                    {(task.date && !today) && 
+                        <span style={{color: (task.date < date() && !task.done) ? "red" : "black"}}>
+                            {formatDate()}
+                        </span>
+                    }
                 </div>
             </div>
         </Dropdown>
