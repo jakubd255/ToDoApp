@@ -49,7 +49,7 @@ const Account = () => {
             window.location.reload(false);
         }).catch(error => {
             if(error.response.data.taken)
-                errorMessage("This email adress is taken");
+                errorMessage("This email address is taken");
         });
     }
 

@@ -47,7 +47,7 @@ const Register = () => {
             }).catch(error => {
                 if(error.response.data.taken)
                 {
-                    errorMessage("This e-mail adress is taken");
+                    errorMessage("This e-mail address is taken");
                     setForm({
                         email: form.email,
                         password: "",
@@ -81,7 +81,7 @@ const Register = () => {
                 <Card size="small">
                     <Space direction="vertical" style={{width: "100%"}}>
                         <Input
-                            placeholder="E-mail adress"
+                            placeholder="E-mail address"
                             name="email"
                             value={form.email}
                             onChange={updateForm}
