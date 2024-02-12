@@ -80,7 +80,7 @@ const LogIn = () => {
                 <Card size="small">
                     <Space direction="vertical" style={{width: "100%"}}>
                         <Input
-                            placeholder="E-mail adress"
+                            placeholder="E-mail address"
                             name="email"
                             value={form.email}
                             onChange={updateForm}
