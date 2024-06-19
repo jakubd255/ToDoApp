@@ -2,8 +2,6 @@
 
 Task organizer written using MERN Stack.
 
-[Live Demo](https://euphonious-stardust-4452c0.netlify.app)
-
 ![](client/src/images/preview.png)
 
 ## Features
@@ -68,5 +66,4 @@ npm run dev
 ```
 
 #### 4. Open in browser
-
 http://localhost:5173
