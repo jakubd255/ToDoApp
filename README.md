@@ -28,33 +28,45 @@ Task organizer written using MERN Stack.
 git clone https://github.com/jakubd255/ToDoApp.git
 ```
 
-1. Install dependencies
-
-```bash
-cd client
-npm install
-
-cd ../server
-npm install
+### Run with Docker
+#### 1. Create a **.env** file and configure it
+```
+ACCESS_TOKEN = YOUR_JWT_SECRET_KEY
 ```
 
-2. Create a MongoDB database
-3. Set up environmental variables
+#### 2. Build and run application
+```bash
+docker-compose --env-file ./.env up
+```
 
-Create a **.env** inside the **server** drirectory and configure it with the necessary environmental variables
+#### 3. Open in browser
+http://localhost:80
 
+
+### Run without Docker
+
+#### 1. Create your MongoDB database
+https://cloud.mongodb.com
+
+#### 2. Set up environmental variables
+Create a **.env** inside the **server** directory and configure it with the environmental variables
 ```
 PORT = 8000
 MONGO_URI = URI_TO_YOUR_MONGO_DATABASE
-ACCESS_TOKEN = RANDOM_STRING
+ACCESS_TOKEN = YOUR_JWT_SECRET_KEY
 ```
 
-4. Run the application
-
+#### 3. Run the application
+In the **server** directory:
 ```bash
-# In the server directory
 npm start
+```
 
-# In the client directory
+In the **client** directory;
+```bash
 npm run dev
 ```
+
+#### 4. Open in browser
+
+http://localhost:5173
