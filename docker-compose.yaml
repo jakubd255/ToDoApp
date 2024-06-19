@@ -1,0 +1,27 @@
+version: "3"
+services:
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - MONGO_URI=mongodb://mongo:27017/todo_db
+      - ACCESS_TOKEN=${ACCESS_TOKEN}
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - VITE_API=http://server:8000
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
